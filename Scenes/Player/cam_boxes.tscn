@@ -1,33 +1,41 @@
-[gd_scene load_steps=3 format=3 uid="uid://c554l2csswxkq"]
+[gd_scene load_steps=4 format=3 uid="uid://ceyrk5novcn40"]
 
 [ext_resource type="Texture2D" uid="uid://ec5o3lnai2ac" path="res://Scenes/Player/Sprite-0001.png" id="1_7yyin"]
+[ext_resource type="Script" path="res://Scripts/Player/camera_controller.gd" id="1_q27jf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_k2xps"]
 
 [node name="cam_boxes" type="Node2D"]
+script = ExtResource("1_q27jf")
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="left" type="Area2D" parent="."]
 
-[node name="left" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="left"]
 shape = SubResource("RectangleShape2D_k2xps")
 
-[node name="Sprite-0001" type="Sprite2D" parent="Area2D/left"]
+[node name="Sprite-0001" type="Sprite2D" parent="left/CollisionShape2D"]
 texture = ExtResource("1_7yyin")
 
-[node name="right" type="CollisionShape2D" parent="Area2D"]
+[node name="right" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="right"]
 shape = SubResource("RectangleShape2D_k2xps")
 
-[node name="Sprite-0001" type="Sprite2D" parent="Area2D/right"]
+[node name="Sprite-0001" type="Sprite2D" parent="right/CollisionShape2D"]
 texture = ExtResource("1_7yyin")
 
-[node name="top" type="CollisionShape2D" parent="Area2D"]
+[node name="top" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="top"]
 shape = SubResource("RectangleShape2D_k2xps")
 
-[node name="Sprite-0001" type="Sprite2D" parent="Area2D/top"]
+[node name="Sprite-0001" type="Sprite2D" parent="top/CollisionShape2D"]
 texture = ExtResource("1_7yyin")
 
-[node name="bottom" type="CollisionShape2D" parent="Area2D"]
+[node name="bottom" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="bottom"]
 shape = SubResource("RectangleShape2D_k2xps")
 
-[node name="Sprite-0001" type="Sprite2D" parent="Area2D/bottom"]
+[node name="Sprite-0001" type="Sprite2D" parent="bottom/CollisionShape2D"]
 texture = ExtResource("1_7yyin")

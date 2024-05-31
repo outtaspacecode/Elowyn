@@ -8,18 +8,37 @@ extends Node2D
 var screen_size : Vector2i = Vector2i(480,264)
 var box_size : Vector2i = Vector2i(20, 20)
 
-@onready var left = $Area2D/left
-@onready var right = $Area2D/right
-@onready var top = $Area2D/top
-@onready var bottom = $Area2D/bottom
+@onready var left = $left/CollisionShape2D
+@onready var right = $right/CollisionShape2D
+@onready var top = $top/CollisionShape2D
+@onready var bottom = $bottom/CollisionShape2D
 
 func _ready():
 	scale_camera()
 
-func _process(_delta):
-	pass
+func _physics_process(_delta):
+	var leave_area = $top.get_overlapping_bodies()
+	if leave_area.size() > 0.0:
+		offset.y -= dimensions.y
+		scale_camera()
+	
+	leave_area = $bottom.get_overlapping_bodies()
+	if leave_area.size() > 0.0:
+		offset.y += dimensions.y
+		scale_camera()
+	
+	leave_area = $left.get_overlapping_bodies()
+	if leave_area.size() > 0.0:
+		offset.x -= dimensions.x
+		scale_camera()
+	
+	leave_area = $right.get_overlapping_bodies()
+	if leave_area.size() > 0.0:
+		offset.x += dimensions.x
+		scale_camera()
 
-func scale_camera():
+
+func scale_camera() -> void:
 	var left_limit = offset.x * screen_size.x
 	var top_limit = offset.y * screen_size.y
 	var right_limit = screen_size.x * dimensions.x
