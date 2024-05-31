@@ -1,9 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://d3s8h3ntdfgty"]
+[gd_scene load_steps=3 format=3 uid="uid://d3s8h3ntdfgty"]
 
 [ext_resource type="Script" path="res://Scripts/Player/player.gd" id="1_m87ko"]
 [ext_resource type="Texture2D" uid="uid://lyxr84ie23ri" path="res://Art/UI/Cursors/cursor.png" id="2_0ado2"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_pinm0"]
 
 [node name="player" type="CharacterBody2D"]
 script = ExtResource("1_m87ko")
@@ -11,8 +9,3 @@ script = ExtResource("1_m87ko")
 [node name="Cursor" type="Sprite2D" parent="."]
 position = Vector2(4, 6)
 texture = ExtResource("2_0ado2")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -8)
-scale = Vector2(0.8, 0.8)
-shape = SubResource("RectangleShape2D_pinm0")
