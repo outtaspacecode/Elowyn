@@ -1,7 +1,0 @@
-
-
-*.cfg
-.godot/editor/filesystem_update4
-/.godot
-.godot/editor/script_editor_cache.cfg
-/.godot/editor

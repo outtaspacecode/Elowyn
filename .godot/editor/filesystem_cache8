@@ -1,6 +1,6 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1717113202
-README.md::TextFile::-1::1717112598::0::1::::<><>::
+::res://::1717114350
+README.md::TextFile::-1::1717114267::0::1::::<><>::
 ::res://Art/::1717113200
 ::res://Art/Tilesheets/::1717113202
 tilesheet_overworld.png::CompressedTexture2D::959619811617537394::1717113155::1717113202::1::::<><>::
@@ -8,9 +8,13 @@ tilesheet_overworld.png::CompressedTexture2D::959619811617537394::1717113155::17
 ::res://Art/UI/Cursors/::1717113025
 cursor.png::CompressedTexture2D::823050973885608466::1717112743::1717113025::1::::<><>::
 ::res://Scenes/::1717113113
-::res://Scenes/Maps/::1717113117
-overworld.tscn::PackedScene::5157581755489988255::1717113117::0::1::::<><>::
-::res://Scenes/Player/::1717113160
-player.tscn::PackedScene::9163726125439661102::1717113066::0::1::::<><>::res://Scripts/player.gd<>uid://lyxr84ie23ri::::res://Art/UI/Cursors/cursor.png
-::res://Scripts/::1717112976
+::res://Scenes/Maps/::1717114054
+overworld.tscn::PackedScene::5157581755489988255::1717114054::0::1::::<><>::uid://d3s8h3ntdfgty::::res://Scenes/Player/player.tscn<>uid://nw32eulix5gw::::res://Art/Tilesheets/tilesheet_overworld.png
+::res://Scenes/Player/::1717114350
+cam_boxes.tscn::PackedScene::-1::1717114310::0::1::::<><>::
+player.tscn::PackedScene::9163726125439661102::1717114350::0::1::::<><>::res://Scripts/Player/player.gd<>uid://lyxr84ie23ri::::res://Art/UI/Cursors/cursor.png
+Sprite-0001.png::CompressedTexture2D::286732129195570318::1717114326::1717114327::1::::<><>::
+::res://Scripts/::1717114350
+::res://Scripts/Player/::1717114375
+camera.gd::GDScript::-1::1717114375::0::1::::<>Node2D<>::
 player.gd::GDScript::-1::1717112976::0::1::::<>CharacterBody2D<>::
