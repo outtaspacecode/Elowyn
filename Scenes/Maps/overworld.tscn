@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://cfqmvand8pnb8"]
+[gd_scene load_steps=8 format=3 uid="uid://cfqmvand8pnb8"]
 
 [ext_resource type="PackedScene" uid="uid://d3s8h3ntdfgty" path="res://Scenes/Player/player.tscn" id="1_srv5h"]
 [ext_resource type="Texture2D" uid="uid://nw32eulix5gw" path="res://Art/Tilesheets/tilesheet_overworld.png" id="2_bpa8m"]
 [ext_resource type="PackedScene" uid="uid://c554l2csswxkq" path="res://Scenes/Player/cam_boxes.tscn" id="3_5yb67"]
 [ext_resource type="Script" path="res://Scripts/Player/camera_controller.gd" id="4_14765"]
+[ext_resource type="Texture2D" uid="uid://cfrc18jb2plbu" path="res://Art/UI/Title/title.png" id="5_xdtpu"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1qr3a"]
 texture = ExtResource("2_bpa8m")
@@ -116,3 +117,8 @@ layer_0/tile_data = PackedInt32Array(0, 1, 0, 65536, 1, 0, 131072, 1, 0, 196608,
 script = ExtResource("4_14765")
 player = NodePath("../player")
 cam = NodePath("../player/Camera2D")
+
+[node name="Title" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(240, 132)
+texture = ExtResource("5_xdtpu")
