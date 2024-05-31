@@ -1,7 +1,7 @@
 # Elowyn
 A passion project game that I am working on
 
-I received inspiration for this project while playing *The Legend of Zelda: the Minish Cap* on a serious of plane rides.
+I received inspiration for this project while playing *The Legend of Zelda: the Minish Cap* on a series of plane rides.
 
 This game also has very light inspiration drawn from the following (in no particular order):
 - George Orwell's *1984*
