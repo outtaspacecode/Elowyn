@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://bmwqveltgaxwq"]
+
+[ext_resource type="Script" path="res://Scripts/Player/player_detector.gd" id="1_nytvr"]
+[ext_resource type="Texture2D" uid="uid://ec5o3lnai2ac" path="res://Scenes/Player/Sprite-0001.png" id="2_eeuci"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7xypl"]
+
+[node name="player_detector" type="Area2D"]
+script = ExtResource("1_nytvr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(10, 10)
+shape = SubResource("RectangleShape2D_7xypl")
+
+[node name="Sprite-0001" type="Sprite2D" parent="CollisionShape2D"]
+visible = false
+texture = ExtResource("2_eeuci")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

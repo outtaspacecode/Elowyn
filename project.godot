@@ -17,6 +17,10 @@ boot_splash/image="res://Art/UI/Title/title.png"
 boot_splash/use_filter=false
 config/icon="res://icon.png"
 
+[autoload]
+
+Events="*res://Scripts/events.gd"
+
 [display]
 
 window/size/viewport_width=480

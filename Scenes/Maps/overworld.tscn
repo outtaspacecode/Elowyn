@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://cfqmvand8pnb8"]
+[gd_scene load_steps=7 format=3 uid="uid://cfqmvand8pnb8"]
 
 [ext_resource type="PackedScene" uid="uid://d3s8h3ntdfgty" path="res://Scenes/Player/player.tscn" id="1_srv5h"]
 [ext_resource type="Texture2D" uid="uid://nw32eulix5gw" path="res://Art/Tilesheets/tilesheet_overworld.png" id="2_bpa8m"]
-[ext_resource type="PackedScene" uid="uid://ceyrk5novcn40" path="res://Scenes/Player/cam_boxes.tscn" id="3_5yb67"]
+[ext_resource type="Script" path="res://Scripts/Player/camera_controller.gd" id="3_ymc5y"]
+[ext_resource type="PackedScene" uid="uid://bmwqveltgaxwq" path="res://Scenes/player_detector.tscn" id="4_oxfjo"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1qr3a"]
 texture = ExtResource("2_bpa8m")
@@ -111,10 +112,11 @@ layer_0/tile_data = PackedInt32Array(0, 1, 0, 65536, 65537, 0, 131072, 65537, 0,
 position = Vector2(119, 54)
 
 [node name="Camera2D" type="Camera2D" parent="player"]
-position_smoothing_enabled = true
+process_mode = 3
 position_smoothing_speed = 10.0
+script = ExtResource("3_ymc5y")
 
-[node name="cam_boxes" parent="." node_paths=PackedStringArray("player", "cam") instance=ExtResource("3_5yb67")]
-dimensions = Vector2i(2, 2)
-player = NodePath("../player")
-cam = NodePath("../player/Camera2D")
+[node name="player_detector" parent="." instance=ExtResource("4_oxfjo")]
+position = Vector2(0, 264)
+
+[node name="player_detector2" parent="." instance=ExtResource("4_oxfjo")]
