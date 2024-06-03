@@ -1,7 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://d3s8h3ntdfgty"]
+[gd_scene load_steps=9 format=3 uid="uid://d3s8h3ntdfgty"]
 
 [ext_resource type="Script" path="res://Scripts/Player/player.gd" id="1_m87ko"]
-[ext_resource type="Texture2D" uid="uid://oaqqo3fcugcc" path="res://Art/Player/elowyn_sprite.png" id="2_c5jwj"]
+[ext_resource type="Texture2D" uid="uid://xvashgghhdk2" path="res://Art/Player/player.png" id="2_d55bj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v1ala"]
 size = Vector2(10, 4)
@@ -23,19 +23,73 @@ tracks/0/keys = {
 "values": [Vector2i(0, 0), Vector2i(1, 0), Vector2i(2, 0), Vector2i(3, 0)]
 }
 
+[sub_resource type="Animation" id="Animation_bfo4m"]
+resource_name = "walk_up"
+length = 0.8
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Elowyn:frame_coords")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [Vector2i(0, 2), Vector2i(1, 2), Vector2i(2, 2), Vector2i(3, 2)]
+}
+
+[sub_resource type="Animation" id="Animation_23m8v"]
+resource_name = "walk_right"
+length = 0.8
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Elowyn:frame_coords")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [Vector2i(0, 1), Vector2i(1, 1), Vector2i(2, 1), Vector2i(3, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_3wpo6"]
+resource_name = "walk_left"
+length = 0.8
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Elowyn:frame_coords")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [Vector2i(0, 3), Vector2i(1, 3), Vector2i(2, 3), Vector2i(3, 3)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_hf4tu"]
 _data = {
-"walk_down": SubResource("Animation_lesac")
+"walk_down": SubResource("Animation_lesac"),
+"walk_left": SubResource("Animation_3wpo6"),
+"walk_right": SubResource("Animation_23m8v"),
+"walk_up": SubResource("Animation_bfo4m")
 }
 
 [node name="player" type="CharacterBody2D"]
 script = ExtResource("1_m87ko")
 
 [node name="Elowyn" type="Sprite2D" parent="."]
-position = Vector2(0, -12)
-texture = ExtResource("2_c5jwj")
+position = Vector2(0, -14)
+texture = ExtResource("2_d55bj")
 hframes = 4
-vframes = 4
+vframes = 5
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -2)

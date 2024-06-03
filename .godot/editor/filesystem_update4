@@ -1,3 +1,4 @@
-res://Scenes/Maps/overworld.tscn
 res://Scenes/Player/player.tscn
+res://Scenes/Maps/overworld.tscn
 res://Scenes/Player/cam_boxes.tscn
+res://Scripts/Player/player.gd
