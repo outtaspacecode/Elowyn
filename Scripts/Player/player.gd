@@ -22,7 +22,7 @@ func animate():
 	elif velocity.y < 0 && velocity.x == 0: direction = "up"
 	elif velocity.y > 0 && velocity.x == 0: direction = "down"
 	
-	var speed = "walk_"
+	var move_speed = "walk_"
 	
 	if direction != "":
-		animation.play(speed + direction)
+		animation.play(move_speed + direction)

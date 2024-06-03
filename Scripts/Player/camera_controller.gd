@@ -6,7 +6,7 @@ extends Node2D
 @export var cam : Camera2D
 
 var screen_size : Vector2i = Vector2i(480,264)
-var box_size : Vector2i = Vector2i(20, 20)
+var box_size : Vector2i = Vector2i(2, 2)
 
 @onready var left = $left/CollisionShape2D
 @onready var right = $right/CollisionShape2D
@@ -52,6 +52,7 @@ func scale_camera() -> void:
 	left.scale = Vector2(1, 1)
 	@warning_ignore("integer_division")
 	left.scale.y = screen_size.y / 18 * dimensions.y
+	left.scale.x = 0.1
 	@warning_ignore("integer_division")
 	left.global_position.x = box_size.y / -2
 	@warning_ignore("integer_division")
@@ -62,6 +63,7 @@ func scale_camera() -> void:
 	top.scale = Vector2(1, 1)
 	@warning_ignore("integer_division")
 	top.scale.x = screen_size.x / 20 * dimensions.x
+	top.scale.y = 0.1
 	@warning_ignore("integer_division")
 	top.global_position.y = box_size.x / -2
 	@warning_ignore("integer_division")
@@ -72,6 +74,7 @@ func scale_camera() -> void:
 	right.scale = Vector2(1, 1)
 	@warning_ignore("integer_division")
 	right.scale.y = screen_size.y / 18 * dimensions.y
+	right.scale.x = 0.1
 	@warning_ignore("integer_division")
 	right.global_position.x = (screen_size.x * dimensions.x) + box_size.y / 2
 	@warning_ignore("integer_division")
@@ -81,6 +84,7 @@ func scale_camera() -> void:
 	bottom.scale = Vector2(1, 1)
 	@warning_ignore("integer_division")
 	bottom.scale.x = screen_size.x / 20 * dimensions.x
+	bottom.scale.y = 0.1
 	@warning_ignore("integer_division")
 	bottom.global_position.y = (screen_size.y * dimensions.y) + box_size.x / 2
 	@warning_ignore("integer_division")
