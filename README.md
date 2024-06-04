@@ -7,6 +7,7 @@ This game also has very light inspiration drawn from the following (in no partic
 - George Orwell
 - KDA
 - My Chemical Romance
+- Studio Ghibli
 - A single screenshot from the 2022 TGA announcement trailer for *Remnant II*
 - The complexity of FromSoftware lore and world building
 - The many, many GameBoy Advance games I played as a kid, as it was the first console I ever owned
