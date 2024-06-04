@@ -1,9 +1,4 @@
-res://Scenes/Player/cam_boxes.tscn
-res://Scripts/Player/camera_controller.gd
 res://Scenes/Maps/overworld.tscn
+res://Scripts/Player/camera_controller.gd
 res://Scenes/Player/player.tscn
-res://Scripts/Player/player.gd
-res://Scripts/Player/camera_controller2.gd
-res://Scripts/Player/camera.gd
-res://Scripts/events.gd
 res://Scenes/player_detector.tscn
