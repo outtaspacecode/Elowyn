@@ -1125,41 +1125,61 @@ layer_1/z_index = 1
 layer_1/tile_data = PackedInt32Array(327681, 65536, 0, 327682, 65536, 0, 327683, 65536, 0, 327684, 65536, 0, 327685, 65536, 0, 65539, 65536, 0, 65540, 65536, 0, 65541, 65536, 0, 65542, 65536, 0, 65543, 65536, 0, 65544, 65536, 0, 131074, 196608, 2, -262141, 131072, 1, -196605, 131072, 1, -131069, 196608, 1, -327677, 196608, 0, -196602, 0, 1, -131066, 262144, 1, -262138, 0, 1, -327674, 262144, 0)
 
 [node name="player" parent="TileMap" instance=ExtResource("1_srv5h")]
-position = Vector2(119, 54)
+unique_name_in_owner = true
+position = Vector2(108, 80)
 
-[node name="Camera2D" type="Camera2D" parent="TileMap/player"]
+[node name="Camera2D" type="Camera2D" parent="."]
 process_mode = 3
+position = Vector2(108, 80)
 position_smoothing_speed = 10.0
 script = ExtResource("3_ymc5y")
 
 [node name="detectors" type="Node2D" parent="."]
 
 [node name="player_detector" parent="detectors" instance=ExtResource("4_oxfjo")]
-position = Vector2(0, 264)
+position = Vector2(240, 132)
 
 [node name="player_detector2" parent="detectors" instance=ExtResource("4_oxfjo")]
+position = Vector2(240, 396)
 
 [node name="player_detector3" parent="detectors" instance=ExtResource("4_oxfjo")]
-position = Vector2(480, 0)
-screens = Vector2i(1, 2)
+position = Vector2(240, 660)
 
 [node name="player_detector4" parent="detectors" instance=ExtResource("4_oxfjo")]
-position = Vector2(0, -264)
+position = Vector2(240, -132)
 
 [node name="player_detector5" parent="detectors" instance=ExtResource("4_oxfjo")]
-position = Vector2(-480, -264)
-screens = Vector2i(1, 4)
+position = Vector2(720, 660)
 
 [node name="player_detector6" parent="detectors" instance=ExtResource("4_oxfjo")]
-position = Vector2(0, 528)
-screens = Vector2i(3, 1)
+position = Vector2(720, 396)
 
 [node name="player_detector7" parent="detectors" instance=ExtResource("4_oxfjo")]
-position = Vector2(480, -264)
-screens = Vector2i(2, 1)
+position = Vector2(720, 132)
 
 [node name="player_detector8" parent="detectors" instance=ExtResource("4_oxfjo")]
-position = Vector2(960, 0)
+position = Vector2(720, -132)
 
 [node name="player_detector9" parent="detectors" instance=ExtResource("4_oxfjo")]
-position = Vector2(960, 264)
+position = Vector2(1200, -132)
+
+[node name="player_detector10" parent="detectors" instance=ExtResource("4_oxfjo")]
+position = Vector2(1200, 132)
+
+[node name="player_detector11" parent="detectors" instance=ExtResource("4_oxfjo")]
+position = Vector2(1200, 396)
+
+[node name="player_detector12" parent="detectors" instance=ExtResource("4_oxfjo")]
+position = Vector2(1200, 660)
+
+[node name="player_detector13" parent="detectors" instance=ExtResource("4_oxfjo")]
+position = Vector2(-240, 660)
+
+[node name="player_detector14" parent="detectors" instance=ExtResource("4_oxfjo")]
+position = Vector2(-240, 396)
+
+[node name="player_detector15" parent="detectors" instance=ExtResource("4_oxfjo")]
+position = Vector2(-240, 132)
+
+[node name="player_detector16" parent="detectors" instance=ExtResource("4_oxfjo")]
+position = Vector2(-240, -132)

@@ -1,7 +1,5 @@
-res://Scenes/Maps/overworld.tscn
-res://Scenes/Player/player.tscn
-res://Scripts/Player/player.gd
 res://Scenes/player_detector.tscn
 res://Scripts/Player/player_detector.gd
+res://Scenes/Maps/overworld.tscn
 res://Scripts/Player/camera_controller.gd
-res://Scripts/events.gd
+res://Scenes/Player/player.tscn
