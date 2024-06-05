@@ -10,10 +10,9 @@ func _ready():
 		reset_limits()
 		var coming_from : Vector2 = floor(player.global_position / resolution)
 		global_position = centerize(coming_from * resolution)
-		var direction : Vector2 = Input.get_vector("left", "right", "up", "down")
-		var going_to : Vector2 = coming_from + direction
+		var going_to : Vector2 = coming_from + player.facing_direction
 		tween.tween_property(self, "global_position", centerize(going_to * resolution), 0.75)
-		player.global_position += direction * Vector2(10, 10)
+		player.global_position += player.facing_direction * Vector2(10, 10)
 		
 		tween.finished.connect(func():
 			get_tree().paused = false
