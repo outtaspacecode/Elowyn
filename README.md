@@ -1,4 +1,5 @@
-# Elowyn
+![title](./Art/UI/Title/title.png)
+
 A passion project game that I am working on
 
 I received inspiration for this project while playing *The Legend of Zelda: the Minish Cap* on a series of plane rides.
